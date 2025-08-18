@@ -1,0 +1,321 @@
+@font-face {
+    font-family: 'HyliaSerif';
+    src: url('../fonts/HyliaSerifBeta-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body.compendium-bg {
+    background-color: #f5f1e6;
+    background-image: url('../imgs/bg.jpg');
+    background-attachment: fixed;
+    color: #3a3226;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.compendium-main {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border: 1px solid #d4c9a8;
+}
+
+/* Navbar */
+.compendium-nav {
+    background-color: #1a1a1a !important;
+    border-bottom: 2px solid #d4af37;
+}
+
+.compendium-title {
+    font-family: 'HyliaSerif', serif;
+    font-size: 1.8rem;
+    color: #d4af37 !important;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.triforce-icon {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav-link {
+    font-family: 'HyliaSerif', serif;
+    color: #f5f1e6 !important;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #d4af37 !important;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'HyliaSerif', serif;
+    color: #3a3226;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Texto normal */
+p, li, td, th, .tech-font {
+    font-family: 'Share Tech', sans-serif;
+    color: #3a3226;
+}
+
+/* Footer */
+.compendium-footer {
+    background-color: #1a1a1a;
+    color: #f5f1e6;
+    font-family: 'Share Tech', sans-serif;
+}
+
+.compendium-hr {
+    border-top: 1px solid #d4af37;
+    opacity: 0.5;
+}
+
+/* Cards */
+.card.compendium-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #d4c9a8;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.card.compendium-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-family: 'HyliaSerif', serif;
+    color: #3a3226;
+}
+
+/* Botões */
+.btn-comendium {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    font-family: 'HyliaSerif', serif;
+    border: none;
+}
+
+.btn-comendium:hover {
+    background-color: #b38f2a;
+    color: #1a1a1a;
+}
+
+/* Estilo do botão de voltar */
+.btn-comendium-back {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d4af37;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #b38f2a;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.btn-comendium-back:hover {
+    background-color: #b38f2a;
+    transform: translateX(-3px);
+    color: #1a1a1a;
+}
+
+.btn-comendium-back:active {
+    transform: translateX(-3px) scale(0.95);
+}
+
+/* Efeitos de destaque */
+.highlight {
+    background-color: rgba(212, 175, 55, 0.2);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Estilos específicos para a página de listagem */
+.compendium-container {
+    background-color: rgba(245, 241, 230, 0.9);
+    border: 2px solid #d4c9a8;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.compendium-entry {
+    background-color: #fff;
+    border: 1px solid #d4af37;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.compendium-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+    border-color: #b38f2a;
+}
+
+.compendium-img {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #d4af37;
+}
+
+.entry-title {
+    color: #3a3226;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #d4af37;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.entry-details {
+    font-size: 0.95rem;
+}
+
+.category-badge {
+    display: inline-block;
+    background-color: rgba(212, 175, 55, 0.2);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-family: 'HyliaSerif', serif;
+    font-size: 0.9rem;
+}
+
+.dlc-tag {
+    display: inline-block;
+    background-color: rgba(106, 74, 60, 0.2);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-family: 'HyliaSerif', serif;
+    font-size: 0.9rem;
+    color: #6a4a3c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .compendium-img {
+        height: 150px;
+    }
+    
+    .entry-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos para a página de detalhes */
+.compendium-detail-container {
+    background-color: rgba(245, 241, 230, 0.9);
+    border: 2px solid #d4c9a8;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.compendium-detail-card {
+    border: none;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.compendium-detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-right: 2px solid #d4af37;
+}
+
+.compendium-detail-header {
+    padding: 15px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+    color: #d4af37;
+    text-align: center;
+}
+
+.entry-name {
+    font-family: 'HyliaSerif', serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.entry-category {
+    font-family: 'HyliaSerif', serif;
+    background-color: rgba(212, 175, 55, 0.3);
+    padding: 3px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.compendium-detail-body {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.entry-section {
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-family: 'HyliaSerif', serif;
+    color: #3a3226;
+    border-bottom: 1px solid #d4af37;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.section-text {
+    font-family: 'Share Tech', sans-serif;
+    color: #3a3226;
+    line-height: 1.6;
+}
+
+.dlc-badge {
+    display: inline-block;
+    background-color: rgba(106, 74, 60, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: 'HyliaSerif', serif;
+    color: #6a4a3c;
+    font-size: 1rem;
+}
+
+.compendium-seal {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.compendium-seal img {
+    width: 60px;
+    opacity: 0.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .compendium-detail-img {
+        border-right: none;
+        border-bottom: 2px solid #d4af37;
+        max-height: 300px;
+    }
+    
+    .entry-name {
+        font-size: 1.8rem;
+    }
+    
+    .compendium-detail-body {
+        padding: 1.5rem;
+    }
+}

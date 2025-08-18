@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container compendium-container py-4">
+  <h1 class="text-center mb-4">Hyrule Compendium</h1>
+  
+  <div class="row g-4">
+    {% for entry in data %}
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="card compendium-entry h-100">
+              <img src="{{ entry.image }}" class="card-img-top compendium-img" alt="{{ entry.name }}">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title entry-title">{{ entry.name }}</h5>
+              <div class="entry-details mb-3">
+                <p class="card-text"><strong>Categoria:</strong> <span class="category-badge">{{ entry.category }}</span></p>
+                {% if entry.dlc %}
+                <p class="card-text"><strong>DLC:</strong> <span class="dlc-tag">{{ entry.dlc }}</span></p>
+                {% endif %}
+              </div>
+              <a href="{{ url_for('home', id=entry.id) }}" class="btn btn-comendium mt-auto">Detalhes</a>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

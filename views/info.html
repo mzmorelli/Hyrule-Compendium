@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container compendium-detail-container py-4">
+  <a href="{{url_for('home')}}" class="btn btn-comendium-back" title="Voltar ao Compendium">
+  <i class="fas fa-chevron-left"></i>
+</a>
+  
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card compendium-detail-card">
+        <div class="row g-0">
+          <!-- Coluna da Imagem -->
+          <div class="col-md-6">
+            <img src="{{entry.image}}" class="img-fluid compendium-detail-img" alt="{{entry.name}}">
+            <div class="compendium-detail-header">
+              <h1 class="entry-name">{{entry.name}}</h1>
+              <span class="entry-category">{{entry.category}}</span>
+            </div>
+          </div>
+          
+          <!-- Coluna das Informações -->
+          <div class="col-md-6">
+            <div class="card-body compendium-detail-body">
+              <div class="entry-section">
+                <h3 class="section-title">Descrição</h3>
+                <p class="section-text">{{entry.description}}</p>
+              </div>
+              
+              {% if entry.common_locations %}
+              <div class="entry-section">
+                <h3 class="section-title">Locais Comuns</h3>
+                <p class="section-text">{{entry.common_locations}}</p>
+              </div>
+              {% endif %}
+              
+              {% if entry.dlc %}
+              <div class="entry-section">
+                <h3 class="section-title">Expansão</h3>
+                <p class="dlc-badge">{{entry.dlc}}</p>
+              </div>
+              {% endif %}
+              
+              <div class="compendium-seal">
+                <img src="{{url_for('static', filename='images/sheikah-seal.png')}}" alt="Símbolo Sheikah">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
