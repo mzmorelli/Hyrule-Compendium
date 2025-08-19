@@ -15,7 +15,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark compendium-nav">
         <div class="container">
             <a class="navbar-brand compendium-title" href="{{url_for('home')}}">
-                <!-- <img src="{{url_for('static', filename='images/triforce.png')}}" alt="Triforce" class="triforce-icon"> -->
                 Hyrule Compendium
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,16 +23,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Criaturas</a>
+                        <a class="nav-link" href="{{url_for('creatures')}}">Criaturas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Monstros</a>
+                        <a class="nav-link" href="{{url_for('monsters')}}">Monstros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Materiais</a>
+                        <a class="nav-link" href="{{url_for('materials')}}">Materiais</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Equipamentos</a>
+                        <a class="nav-link" href="{{url_for('equipment')}}">Equipamentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('treasure')}}">Tesouros</a>
                     </li>
                 </ul>
             </div>
@@ -48,7 +50,7 @@
     <footer class="compendium-footer py-3 mt-4">
         <div class="container text-center">
             <hr class="compendium-hr">
-            <p class="mb-0">© 2023 Hyrule Compendium. Todos os direitos reservados.</p>
+            <p class="mb-0">© 2025 Hyrule Compendium. Todos os direitos reservados.</p>
             <small>Este não é um site oficial da Nintendo ou da The Legend of Zelda.</small>
         </div>
     </footer>

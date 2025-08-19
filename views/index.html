@@ -1,28 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<div class="container compendium-container py-4">
-  <h1 class="text-center mb-4">Hyrule Compendium</h1>
-  
-  <div class="row g-4">
-    {% for entry in data %}
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="card compendium-entry h-100">
-              <img src="{{ entry.image }}" class="card-img-top compendium-img" alt="{{ entry.name }}">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title entry-title">{{ entry.name }}</h5>
-              <div class="entry-details mb-3">
-                <p class="card-text"><strong>Categoria:</strong> <span class="category-badge">{{ entry.category }}</span></p>
-                {% if entry.dlc %}
-                <p class="card-text"><strong>DLC:</strong> <span class="dlc-tag">{{ entry.dlc }}</span></p>
-                {% endif %}
-              </div>
-              <a href="{{ url_for('home', id=entry.id) }}" class="btn btn-comendium mt-auto">Detalhes</a>
-            </div>
-          </div>
-        </div>
-    {% endfor %}
-  </div>
-</div>
-
+	<div class="text-center py-5">
+		<h1>Bem-vindo ao Hyrule Compendium</h1>
+    <img src="{{url_for('static', filename='imgs/Logo - Full.png')}}" alt="Hyrule Compendium" class="img-fluid mb-3 logo-full">
+		<p class="lead">Explore as criaturas, monstros, materiais, equipamentos e tesouros de Hyrule.</p>
+		<div class="compendium-icon-grid mt-4">
+			<a href="{{url_for('creatures')}}" class="compendium-icon icon-creatures" aria-label="Criaturas"><span class="visually-hidden">Criaturas</span></a>
+			<a href="{{url_for('monsters')}}" class="compendium-icon icon-monsters" aria-label="Monstros"><span class="visually-hidden">Monstros</span></a>
+			<a href="{{url_for('materials')}}" class="compendium-icon icon-materials" aria-label="Materiais"><span class="visually-hidden">Materiais</span></a>
+			<a href="{{url_for('equipment')}}" class="compendium-icon icon-equipment" aria-label="Equipamentos"><span class="visually-hidden">Equipamentos</span></a>
+			<a href="{{url_for('treasure')}}" class="compendium-icon icon-treasure" aria-label="Tesouros"><span class="visually-hidden">Tesouros</span></a>
+		</div>
+	</div>
 {% endblock content %}
